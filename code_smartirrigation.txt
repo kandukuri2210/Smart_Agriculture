@@ -1,0 +1,50 @@
+#define BLYNK_PRINT Serial
+#include<ESP8266WiFi.h>
+/*#include<BlynkSimpleEsp8266.h>
+char auth[]="RMZ8Y81D1LqEfS8CKqSyQWWQS1ii7IZi";
+char ssid[]="Redmi Y3";
+char pass[]="123456789";
+int moisture;
+int data1;
+void setup() {
+  // put your setup code here, to run once:
+  
+  Serial.begin(9600);
+  pinMode(A0,INPUT);
+  Blynk.begin(auth,ssid,pass);
+}
+
+
+void loop() {
+  Blynk.run();
+ 
+  moisture=analogRead(0);
+// moisture=DigitalRead(0)
+  delay(100);
+  data1=map(moisture,500,1023,100,0);
+  Serial.println();
+  Serial.print("moisture:");
+  //serial.println();
+  Serial.println(data1);
+  if(data1==1){Serial.println("Nocrop");}
+  else{Serial.println("Chilli");}
+  Blynk.virtualWrite(V5,data1);
+  //if(da>80){
+  //Blynk.notify("Water reached level");}
+  // put your main code here, to run repeatedly:
+
+}*/
+void setup()
+{
+  Serial.begin(9600);
+  pinMode(A0,INPUT);
+}
+void loop()
+{
+int  moisture=analogRead(0);
+  delay(100);
+int  data1=map(moisture,500,1023,100,0);
+  Serial.println();
+  Serial.print("moisture:");
+  Serial.println(data1);
+}
